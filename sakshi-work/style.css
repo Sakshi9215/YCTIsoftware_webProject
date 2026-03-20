@@ -1,0 +1,52 @@
+/* HERO */
+.hero {
+  background: purple;
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.search-box {
+  padding: 10px;
+  width: 300px;
+  border-radius: 20px;
+  border: none;
+}
+
+/* TOPICS */
+.topics {
+  text-align: center;
+  padding: 40px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 20px;
+  width: 250px;
+  border-radius: 10px;
+}
+
+/* ARTICLES */
+.articles {
+  text-align: center;
+  padding: 40px;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 40px;
+}
+
+.contact button {
+  background: purple;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+}
