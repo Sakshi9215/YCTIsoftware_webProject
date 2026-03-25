@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Query Page</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f4f6fb;
+}
+
+/* header */
+.header{
+background:linear-gradient(120deg,#667eea,#764ba2);
+color:white;
+text-align:center;
+padding:40px;
+}
+
+.header h1{
+margin:0;
+}
+
+/* form design */
+.form-container{
+width:40%;
+margin:40px auto;
+background:white;
+padding:30px;
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+label{
+font-weight:bold;
+}
+
+input, select, textarea{
+
+width:100%;
+padding:12px;
+margin-top:8px;
+margin-bottom:18px;
+border-radius:8px;
+border:1px solid #ccc;
+font-size:14px;
+
+}
+
+button{
+
+background:#667eea;
+color:white;
+padding:12px;
+border:none;
+border-radius:8px;
+width:100%;
+font-size:16px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#5a67d8;
+
+}
+
+.footer{
+
+text-align:center;
+padding:20px;
+color:#777;
+
+}
+
+</style>
+
+</head>
+
+
+
+<body>
+
+<div class="header">
+
+<h1>Submit Your Query</h1>
+
+<p>We will respond as soon as possible</p>
+
+</div>
+
+
+
+<div class="form-container">
+
+<form>
+
+<label>Name</label>
+<input type="text" placeholder="Enter your name">
+
+<label>Email</label>
+<input type="email" placeholder="Enter your email">
+
+<label>Subject</label>
+
+<select>
+
+<option>Course Issue</option>
+<option>Login Problem</option>
+<option>Payment Issue</option>
+<option>Technical Error</option>
+<option>Other</option>
+
+</select>
+
+
+<label>Your Query</label>
+
+<textarea rows="5" placeholder="Write your query"></textarea>
+
+
+<button type="submit">
+
+Submit Query
+
+</button>
+
+
+</form>
+
+</div>
+
+
+
+<div class="footer">
+
+© YCTI Query Support
+
+</div>
+
+
+</body>
+
+</html>

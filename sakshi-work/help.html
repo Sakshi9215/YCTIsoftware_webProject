@@ -1,57 +1,217 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Help Page</title>
-  <link rel="stylesheet" href="style.css">
+<title>Help & Query</title>
+
+<style>
+
+body{
+font-family: Arial;
+margin:0;
+background:#f5f7fb;
+}
+
+/* header */
+.header{
+background:linear-gradient(120deg,#4facfe,#00f2fe);
+color:white;
+padding:30px;
+text-align:center;
+}
+
+.header img{
+width:80px;
+}
+
+.header h1{
+margin:10px 0 5px;
+}
+
+/* search */
+.search-box{
+text-align:center;
+margin:30px;
+}
+
+.search-box input{
+width:60%;
+padding:12px;
+border-radius:25px;
+border:1px solid #ccc;
+}
+
+/* FAQ design */
+.container{
+width:80%;
+margin:auto;
+}
+
+.faq{
+background:white;
+margin:10px 0;
+padding:15px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+cursor:pointer;
+}
+
+.answer{
+display:none;
+padding-top:10px;
+color:#555;
+}
+
+/* form */
+.form-box{
+background:white;
+padding:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+margin-top:30px;
+}
+
+input, textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+button{
+background:#4facfe;
+color:white;
+border:none;
+padding:12px;
+border-radius:6px;
+cursor:pointer;
+width:100%;
+}
+
+.footer{
+text-align:center;
+padding:20px;
+color:#666;
+}
+
+</style>
+
+<script>
+
+function toggleAnswer(id){
+
+var x=document.getElementById(id);
+
+if(x.style.display=="block")
+{
+x.style.display="none";
+}
+else
+{
+x.style.display="block";
+}
+
+}
+
+</script>
+
 </head>
+
 
 <body>
 
-  <!-- HERO SECTION -->
-  <div class="hero">
-    <h1>How Can We Help?</h1>
-    <p>Find advice and answers from our support team</p>
-    <input type="text" placeholder="Search for answers..." class="search-box">
-  </div>
+<div class="header">
 
-  <!-- TOPICS -->
-  <div class="topics">
-    <h2>Browse All Topics</h2>
+<img src="logo.png">
 
-    <div class="card-container">
-      <div class="card">
-        <h3>Getting Started</h3>
-        <p>Get your account running quickly</p>
-      </div>
+<h1>Help & Support</h1>
 
-      <div class="card">
-        <h3>Account and Billing</h3>
-        <p>Manage account and billing</p>
-      </div>
+<p>How can we help you?</p>
 
-      <div class="card">
-        <h3>Troubleshooting</h3>
-        <p>Common issues and solutions</p>
-      </div>
-    </div>
-  </div>
+</div>
 
-  <!-- ARTICLES -->
-  <div class="articles">
-    <h2>Featured Articles</h2>
-    <ul>
-      <li>Getting a JavaScript error</li>
-      <li>Accepted payment methods</li>
-      <li>Cancel subscription</li>
-      <li>Setup new domain</li>
-    </ul>
-  </div>
 
-  <!-- CONTACT -->
-  <div class="contact">
-    <h2>Didn't find your answer?</h2>
-    <button>CONTACT US</button>
-  </div>
+<div class="search-box">
+
+<input type="text" placeholder="Search your question">
+
+</div>
+
+
+<div class="container">
+
+
+<div class="faq" onclick="toggleAnswer('q1')">
+
+How to register course?
+
+<div class="answer" id="q1">
+
+Login → choose course → click enroll
+
+</div>
+
+</div>
+
+
+
+<div class="faq" onclick="toggleAnswer('q2')">
+
+How to login?
+
+<div class="answer" id="q2">
+
+Use email and password
+
+</div>
+
+</div>
+
+
+
+<div class="faq" onclick="toggleAnswer('q3')">
+
+How to contact support?
+
+<div class="answer" id="q3">
+
+Fill form below
+
+</div>
+
+</div>
+
+
+
+<div class="form-box">
+
+<h2>Submit your Query</h2>
+
+<input type="text" placeholder="Enter name">
+
+<input type="email" placeholder="Enter email">
+
+<textarea rows="5" placeholder="Write your problem"></textarea>
+
+<a href="query.html">
+<button>Go to Query Page</button>
+</a>
+
+</div>
+
+
+</div>
+
+
+
+<div class="footer">
+
+© YCTI Help Desk
+
+</div>
+
 
 </body>
+
 </html>
