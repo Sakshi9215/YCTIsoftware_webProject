@@ -3,82 +3,127 @@
 
 <head>
 
-<title>Query Page</title>
+<title>Submit Query</title>
 
 <style>
 
 body{
-font-family: Arial;
+
+font-family:Arial;
 margin:0;
-background:#f4f6fb;
+background:#f6f7fb;
+
 }
 
-/* header */
+/* HEADER */
+
 .header{
-background:linear-gradient(120deg,#667eea,#764ba2);
+
+background:linear-gradient(120deg,#6f42c1,#9f7aea);
 color:white;
 text-align:center;
-padding:40px;
+padding:60px 20px;
+
 }
 
 .header h1{
+
 margin:0;
+
 }
 
-/* form design */
-.form-container{
+/* FORM */
+
+.form-box{
+
 width:40%;
 margin:40px auto;
 background:white;
 padding:30px;
 border-radius:12px;
 box-shadow:0 4px 12px rgba(0,0,0,0.1);
+
 }
 
 label{
+
 font-weight:bold;
+
 }
 
-input, select, textarea{
+input, textarea{
 
 width:100%;
 padding:12px;
-margin-top:8px;
-margin-bottom:18px;
+margin:10px 0;
 border-radius:8px;
 border:1px solid #ccc;
-font-size:14px;
 
 }
 
+textarea{
+
+resize:none;
+
+}
+
+/* BUTTON */
+
 button{
 
-background:#667eea;
+background:#6f42c1;
 color:white;
 padding:12px;
 border:none;
 border-radius:8px;
 width:100%;
-font-size:16px;
 cursor:pointer;
 
 }
 
 button:hover{
 
-background:#5a67d8;
+background:#5936a2;
 
 }
+
+/* FOOTER */
 
 .footer{
 
 text-align:center;
 padding:20px;
-color:#777;
+color:gray;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.form-box{
+
+width:90%;
+
+}
 
 }
 
 </style>
+
+
+
+<script>
+
+function submitQuery(){
+
+alert("Query submitted successfully!");
+
+return false;
+
+}
+
+</script>
 
 </head>
 
@@ -86,42 +131,54 @@ color:#777;
 
 <body>
 
+
+
 <div class="header">
 
 <h1>Submit Your Query</h1>
 
-<p>We will respond as soon as possible</p>
+<p>
+
+Our team will respond soon
+
+</p>
 
 </div>
 
 
 
-<div class="form-container">
+<div class="form-box">
 
-<form>
+<form onsubmit="return submitQuery()">
 
 <label>Name</label>
-<input type="text" placeholder="Enter your name">
+
+<input 
+type="text"
+placeholder="Enter name"
+required>
+
+
 
 <label>Email</label>
-<input type="email" placeholder="Enter your email">
 
-<label>Subject</label>
+<input 
+type="email"
+placeholder="Enter email"
+required>
 
-<select>
-
-<option>Course Issue</option>
-<option>Login Problem</option>
-<option>Payment Issue</option>
-<option>Technical Error</option>
-<option>Other</option>
-
-</select>
 
 
 <label>Your Query</label>
 
-<textarea rows="5" placeholder="Write your query"></textarea>
+<textarea
+
+rows="5"
+placeholder="Write your problem"
+required>
+
+</textarea>
+
 
 
 <button type="submit">
@@ -129,6 +186,7 @@ color:#777;
 Submit Query
 
 </button>
+
 
 
 </form>
@@ -139,9 +197,10 @@ Submit Query
 
 <div class="footer">
 
-© YCTI Query Support
+© 2026 Query Support
 
 </div>
+
 
 
 </body>

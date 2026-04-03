@@ -2,153 +2,155 @@
 <html>
 
 <head>
-<title>Help & Query</title>
+
+<title>Help Center</title>
 
 <style>
 
 body{
-font-family: Arial;
 margin:0;
-background:#f5f7fb;
+font-family:Arial;
+background:#f6f7fb;
 }
 
-/* header */
-.header{
-background:linear-gradient(120deg,#4facfe,#00f2fe);
+/* HERO */
+
+.hero{
+
+background:linear-gradient(rgba(111,66,193,0.9),
+rgba(111,66,193,0.9)),
+url("https://images.unsplash.com/photo-1522071820081-009f0129c71c");
+
+background-size:cover;
+background-position:center;
 color:white;
-padding:30px;
 text-align:center;
+padding:100px 20px;
+
 }
 
-.header img{
-width:80px;
+.hero h1{
+font-size:38px;
+margin-bottom:10px;
 }
 
-.header h1{
-margin:10px 0 5px;
-}
+/* SEARCH */
 
-/* search */
 .search-box{
-text-align:center;
-margin:30px;
+
+margin-top:20px;
+
 }
 
 .search-box input{
+
 width:60%;
-padding:12px;
+max-width:500px;
+padding:14px;
 border-radius:25px;
-border:1px solid #ccc;
+border:none;
+font-size:15px;
+
 }
 
-/* FAQ design */
-.container{
-width:80%;
+/* SECTION */
+
+.section{
+
+width:85%;
+max-width:1000px;
 margin:auto;
+padding:50px 0;
+
 }
 
-.faq{
+/* TOPICS */
+
+.topics{
+
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+justify-content:center;
+
+}
+
+.card{
+
 background:white;
-margin:10px 0;
-padding:15px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
-cursor:pointer;
+padding:25px;
+width:260px;
+text-align:center;
+border-radius:12px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+
 }
 
-.answer{
-display:none;
-padding-top:10px;
-color:#555;
+.card h3{
+color:#6f42c1;
 }
 
-/* form */
-.form-box{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 2px 8px rgba(0,0,0,0.1);
-margin-top:30px;
+/* ARTICLES */
+
+.article{
+
+padding:12px 0;
+border-bottom:1px solid #ddd;
+
 }
 
-input, textarea{
-width:100%;
-padding:10px;
-margin:8px 0;
-border-radius:6px;
-border:1px solid #ccc;
+/* CONTACT */
+
+.contact{
+
+text-align:center;
+background:#fafafa;
+padding:40px;
+border-radius:12px;
+margin-top:40px;
+
 }
 
-button{
-background:#4facfe;
+.contact button{
+
+background:#6f42c1;
 color:white;
 border:none;
-padding:12px;
-border-radius:6px;
+padding:12px 20px;
+border-radius:8px;
 cursor:pointer;
-width:100%;
+
 }
 
+/* FOOTER */
+
 .footer{
+
 text-align:center;
 padding:20px;
-color:#666;
+color:gray;
+
 }
 
 </style>
 
-<script>
-
-function toggleAnswer(id){
-
-var x=document.getElementById(id);
-
-if(x.style.display=="block")
-{
-x.style.display="none";
-}
-else
-{
-x.style.display="block";
-}
-
-}
-
-</script>
-
 </head>
+
 
 
 <body>
 
-<div class="header">
 
-<img src="logo.png">
 
-<h1>Help & Support</h1>
+<div class="hero">
 
-<p>How can we help you?</p>
+<h1>How Can We Help?</h1>
 
-</div>
-
+<p>Search your question below</p>
 
 <div class="search-box">
 
-<input type="text" placeholder="Search your question">
-
-</div>
-
-
-<div class="container">
-
-
-<div class="faq" onclick="toggleAnswer('q1')">
-
-How to register course?
-
-<div class="answer" id="q1">
-
-Login → choose course → click enroll
+<input type="text" placeholder="Search for answers...">
 
 </div>
 
@@ -156,49 +158,122 @@ Login → choose course → click enroll
 
 
 
-<div class="faq" onclick="toggleAnswer('q2')">
+<div class="section">
 
-How to login?
+<h2 style="text-align:center;color:#6f42c1">
 
-<div class="answer" id="q2">
+Browse All Topics
 
-Use email and password
-
-</div>
-
-</div>
+</h2>
 
 
 
-<div class="faq" onclick="toggleAnswer('q3')">
+<div class="topics">
 
-How to contact support?
+<div class="card">
 
-<div class="answer" id="q3">
+<h3>Getting Started</h3>
 
-Fill form below
-
-</div>
+<p>Basic steps to start</p>
 
 </div>
 
 
 
-<div class="form-box">
+<div class="card">
 
-<h2>Submit your Query</h2>
+<h3>Account & Billing</h3>
 
-<input type="text" placeholder="Enter name">
+<p>Payment & account help</p>
 
-<input type="email" placeholder="Enter email">
+</div>
 
-<textarea rows="5" placeholder="Write your problem"></textarea>
+
+
+<div class="card">
+
+<h3>Troubleshooting</h3>
+
+<p>Technical problem solution</p>
+
+</div>
+
+
+
+</div>
+
+
+
+<h2 style="color:#6f42c1">
+
+Featured Articles
+
+</h2>
+
+
+
+<div class="article">
+
+Login problem solution
+
+</div>
+
+
+
+<div class="article">
+
+Payment issue help
+
+</div>
+
+
+
+<div class="article">
+
+Course enrollment steps
+
+</div>
+
+
+
+<div class="article">
+
+Certificate download guide
+
+</div>
+
+
+
+<div class="contact">
+
+<h3>
+
+Didn't find answer?
+
+</h3>
+
+<p>
+
+Contact our support team
+
+</p>
+
+
 
 <a href="query.html">
-<button>Go to Query Page</button>
+
+<button>
+
+Contact Us
+
+</button>
+
 </a>
 
+
+
 </div>
+
 
 
 </div>
@@ -207,9 +282,10 @@ Fill form below
 
 <div class="footer">
 
-© YCTI Help Desk
+© 2026 Help Center
 
 </div>
+
 
 
 </body>
